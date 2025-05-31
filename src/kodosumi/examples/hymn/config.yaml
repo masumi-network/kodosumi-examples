@@ -1,0 +1,10 @@
+name: hymn
+route_prefix: /hymn
+import_path: kodosumi.examples.hymn.app:fast_app
+runtime_env: 
+  pip:
+  - crewai
+  - crewai_tools
+  env_vars:
+    OTEL_SDK_DISABLED: "true"
+    OPENAI_API_KEY: ...
