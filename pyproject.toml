@@ -9,7 +9,7 @@ description = "Example packages for kodosumi"
 
 dependencies = [
     "kodosumi @ git+https://github.com/masumi-network/kodosumi.git@dev",
-    "crewai==0.1",
+    "crewai",
     "crewai-tools",
     "lorem-text",
 ]
