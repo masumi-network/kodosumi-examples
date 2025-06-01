@@ -21,6 +21,6 @@ name = "Michael Rau"
 email = "m.rau@house-of-communication.com"
 
 [tool.setuptools.packages.find]
-where = ["src/"]
+where = ["./"]
 include = ["kodosumi.examples*"]
 namespaces = true
