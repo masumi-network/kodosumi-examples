@@ -149,7 +149,7 @@ fast_app = ThroughputRunner.bind()  # type: ignore
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
-        "serviceplan.examples.throughput.app:app", 
+        "agentic.examples.throughput.app:app", 
         host="0.0.0.0", 
         port=8013, 
         reload=True
