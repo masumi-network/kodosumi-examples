@@ -15,7 +15,7 @@ app = ServeAPI()
 
 
 def run(inputs: dict, tracer: core.Tracer):
-    import kodosumi.examples.prime.calculator as calculator
+    import kodosumi_examples.prime.calculator as calculator
     start = inputs.get("start", "").strip()
     end = inputs.get("end", "").strip()
     tasks = inputs.get("tasks", "").strip()
@@ -24,7 +24,7 @@ def run(inputs: dict, tracer: core.Tracer):
     return distribution
 
 async def run_async(inputs: dict, tracer: core.Tracer):
-    import kodosumi.examples.prime.calculator as calculator
+    import kodosumi_examples.prime.calculator as calculator
     start = inputs.get("start", "").strip()
     end = inputs.get("end", "").strip()
     tasks = inputs.get("tasks", "").strip()

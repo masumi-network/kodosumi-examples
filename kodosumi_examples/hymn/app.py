@@ -88,7 +88,7 @@ async def enter(request: fastapi.Request, inputs: dict):
     topic = inputs.get("topic", "").strip()
     if not topic:
         raise core.InputsError(topic="Please give me a topic.")
-    return core.Launch(request, "kodosumi.examples.hymn.app:crew", inputs=inputs)
+    return core.Launch(request, "kodosumi_examples.hymn.app:crew", inputs=inputs)
 
 
 @serve.deployment
@@ -101,7 +101,7 @@ fast_app = HymnCreator.bind()  # type: ignore
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
-        "kodosumi.examples.hymn.app:app", 
+        "kodosumi_examples.hymn.app:app", 
         host="0.0.0.0", 
         port=8011, 
         reload=True
