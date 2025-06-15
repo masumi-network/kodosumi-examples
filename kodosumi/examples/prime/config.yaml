@@ -1,3 +1,0 @@
-name: prime
-route_prefix: /prime
-import_path: kodosumi.examples.prime.app:fast_app
