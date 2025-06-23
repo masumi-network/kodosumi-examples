@@ -1,3 +1,0 @@
-name: form
-route_prefix: /form
-import_path: kodosumi.examples.form.app:fast_app

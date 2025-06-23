@@ -15,7 +15,7 @@ app = ServeAPI()
 
 
 def run(inputs: dict, tracer: core.Tracer):
-    import kodosumi.examples.prime.calculator as calculator
+    import kodosumi_examples.prime.calculator as calculator
     start = inputs.get("start", "").strip()
     end = inputs.get("end", "").strip()
     tasks = inputs.get("tasks", "").strip()
@@ -24,7 +24,7 @@ def run(inputs: dict, tracer: core.Tracer):
     return distribution
 
 async def run_async(inputs: dict, tracer: core.Tracer):
-    import kodosumi.examples.prime.calculator as calculator
+    import kodosumi_examples.prime.calculator as calculator
     start = inputs.get("start", "").strip()
     end = inputs.get("end", "").strip()
     tasks = inputs.get("tasks", "").strip()
@@ -60,7 +60,7 @@ prime_model = core.forms.Model(
     )
 async def enter(request: fastapi.Request, inputs: dict):
     return core.Launch(
-        request, "kodosumi.examples.prime.app:run", inputs=inputs)
+        request, "kodosumi_examples.prime.app:run", inputs=inputs)
 
 
 @app.enter(
@@ -75,7 +75,7 @@ async def enter(request: fastapi.Request, inputs: dict):
     )
 async def enter_a(request: fastapi.Request, inputs: dict):
     return core.Launch(
-        request, "kodosumi.examples.prime.app:run_async", inputs=inputs)
+        request, "kodosumi_examples.prime.app:run_async", inputs=inputs)
 
 
 @serve.deployment
@@ -88,7 +88,7 @@ fast_app = PrimeDistribution.bind()  # type: ignore
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
-        "kodosumi.examples.prime.app:app", 
+        "kodosumi_examples.prime.app:app", 
         host="0.0.0.0", 
         port=8012, 
         reload=True

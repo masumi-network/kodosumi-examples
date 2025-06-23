@@ -74,7 +74,7 @@ fast_app = FormText.bind()  # type: ignore
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
-        "kodosumi.examples.form.app:app", 
+        "kodosumi_examples.form.app:app", 
         host="0.0.0.0", 
         port=8010, 
         reload=True

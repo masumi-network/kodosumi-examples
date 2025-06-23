@@ -1,6 +1,6 @@
 name: hymn
 route_prefix: /hymn
-import_path: kodosumi.examples.hymn.app:fast_app
+import_path: kodosumi_examples.hymn.app:fast_app
 runtime_env: 
   pip:
   - crewai
