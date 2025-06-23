@@ -1,6 +1,6 @@
 name: throughput
 route_prefix: /throughput
-import_path: kodosumi.examples.throughput.app:fast_app
+import_path: kodosumi_examples.throughput.app:fast_app
 runtime_env: 
   pip:
   - lorem-text
