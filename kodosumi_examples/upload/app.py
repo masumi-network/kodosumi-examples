@@ -102,7 +102,6 @@ model = F.Model(
     * `InputsFile` for file processing
     * Ray for parallel processing
     """),
-    F.Break(),
     F.HR(),
     F.InputFiles(
         label="Upload Files", 
