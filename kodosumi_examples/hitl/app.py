@@ -3,6 +3,7 @@ from kodosumi.core import ServeAPI, forms as F
 from kodosumi.response import Markdown
 import fastapi
 from typing import Optional
+from ray import serve
 
 app = ServeAPI()
 
@@ -72,6 +73,13 @@ async def enter(request: fastapi.Request, inputs: dict):
 @app.lock(name="simple_feedback")
 async def collect_feedback(request: fastapi.Request, inputs: Optional[dict] = None):
     return feedback_form
+
+@serve.deployment
+@serve.ingress(app)
+class HITLDemo: pass
+
+fast_app = FormText.bind()  # type: ignore
+
 
 if __name__ == "__main__":
     import uvicorn
