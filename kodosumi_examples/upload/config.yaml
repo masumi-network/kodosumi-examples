@@ -1,0 +1,6 @@
+name: upload
+route_prefix: /upload
+import_path: kodosumi_examples.upload.app:fast_app
+runtime_env: 
+  pip:
+  - python-pptx
